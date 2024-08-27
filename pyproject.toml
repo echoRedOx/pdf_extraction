@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf3j"
+version = "0.1.0"
+description = "A package for converting PDF files using PyMuPDF"
+authors = [{name = "echoRedOx", email = "echodevs@proton.me"}]
+dependencies = [
+    "pymupdf4llm",
+    "pymupdf"
+]
+
+[project.scripts]
+pdf-to-md = "pdf3j.pdf_to_md:extract_pdf_to_md"
+pdf-to-txt = "pdf3j.pdf_to_txt:extract_pdf_to_txt"
